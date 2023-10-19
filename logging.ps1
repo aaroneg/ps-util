@@ -16,7 +16,7 @@ function add-logentry {
         [Parameter(Mandatory=$true,Position=1)][string]$File
     )
     $DateTime=Get-Date -Format "s"
-    "$($DateTime) $Message" | Write-Host
-    "$($DateTime) $Message" | Out-File -Append -Encoding utf8 -FilePath $File
+    "[$($DateTime)] $Message" | Write-Host
+    "[$($DateTime)] $Message" | Out-File -Append -Encoding utf8 -FilePath $File
 }
 
